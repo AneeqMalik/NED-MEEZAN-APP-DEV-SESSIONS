@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meezan_commerce/providers/products_provider.dart';
+import 'package:meezan_commerce/providers/product_provider.dart';
 import 'package:meezan_commerce/screens/cart_screen.dart';
 import 'package:provider/provider.dart';
 

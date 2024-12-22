@@ -1,4 +1,4 @@
-name: meezan_commerce
+name: flutter_mlkit
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -35,11 +35,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-  http: ^1.2.2
-  provider: ^6.1.2
-  firebase_core: ^3.8.1
-  firebase_auth: ^5.3.4
-  google_sign_in: ^6.2.2
+  google_mlkit_commons: any
+  google_mlkit_object_detection: ^0.14.0
+  image_picker: ^1.1.2
+  camera: ^0.10.6
+  path: ^1.9.0
+  path_provider: ^2.1.4
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +65,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/ml/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

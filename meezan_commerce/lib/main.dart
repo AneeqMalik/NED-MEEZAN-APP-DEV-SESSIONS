@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:meezan_commerce/providers/products_provider.dart';
+import 'package:meezan_commerce/auth/AuthenticationWrapper.dart';
+import 'package:meezan_commerce/providers/product_provider.dart';
 import 'package:meezan_commerce/providers/theme_provider.dart';
+import 'package:meezan_commerce/screens/login_screen.dart';
 import 'package:meezan_commerce/screens/main_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -27,7 +35,7 @@ class MyApp extends StatelessWidget {
             return MaterialApp(
               title: 'Meezan Commerce',
               theme: themeData,
-              home: const MainScreen(),
+              home: AuthenticationWrapper(),
             );
           },
         ),

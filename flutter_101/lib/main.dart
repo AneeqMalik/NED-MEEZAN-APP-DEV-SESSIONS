@@ -8,14 +8,7 @@ import 'package:flutter_101/state_management/provider/ProviderSessions/provider_
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => SettingsProvider()),
-      ],
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -37,14 +30,19 @@ class MyApp extends StatelessWidget {
     //     home: const ProviderExample(),
     //   ),
     // );
-    return Consumer<SettingsProvider>(
-      builder: (context, settingsProvider, child) {
-        return MaterialApp(
-          title: 'Flutter Demo',
-          theme: settingsProvider.currentTheme, // Dynamically update theme
-          home: const MainScreen(),
-        );
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => SettingsProvider()),
+      ],
+      child: Consumer<SettingsProvider>(
+        builder: (context, settings, child) {
+          return MaterialApp(
+            title: 'Meezan E-Commerce',
+            theme: settings.currentTheme,
+            home: const MainScreen(),
+          );
+        },
+      ),
     );
   }
 }

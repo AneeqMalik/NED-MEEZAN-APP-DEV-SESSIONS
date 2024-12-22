@@ -1,4 +1,4 @@
-package org.aneeq.meezan_commerce
+package com.example.flutter_mlkit
 
 import io.flutter.embedding.android.FlutterActivity
 

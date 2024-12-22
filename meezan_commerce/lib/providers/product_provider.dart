@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meezan_commerce/models/products_model.dart';
-import 'package:meezan_commerce/services/products_service.dart';
+import 'package:meezan_commerce/models/product_model.dart';
+import 'package:meezan_commerce/services/product_service.dart';
 
 class ProductsProvider extends ChangeNotifier {
   final ProductsService _service = ProductsService();
@@ -26,7 +26,6 @@ class ProductsProvider extends ChangeNotifier {
       _errorMessage = 'Failed to fetch products: $e';
     } finally {
       _isLoading = false;
-      notifyListeners();
     }
   }
 

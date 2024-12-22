@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:meezan_commerce/models/products_model.dart';
+import 'package:meezan_commerce/models/product_model.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsService {
