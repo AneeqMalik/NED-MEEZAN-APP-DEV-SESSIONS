@@ -3,8 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:meezan_commerce/screens/login_screen.dart';
 import 'package:meezan_commerce/screens/main_screen.dart';
 
-class AuthenticationWrapper extends StatelessWidget {
+class AuthenticationWrapper extends StatefulWidget {
   const AuthenticationWrapper({super.key});
+
+  @override
+  _AuthenticationWrapperState createState() => _AuthenticationWrapperState();
+}
+
+class _AuthenticationWrapperState extends State<AuthenticationWrapper> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

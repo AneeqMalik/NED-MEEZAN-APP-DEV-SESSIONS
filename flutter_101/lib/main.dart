@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_101/state_management/changeNotifier/providers/settings_provider.dart';
 import 'package:flutter_101/state_management/changeNotifier/screens/main_screen.dart';
+import 'package:flutter_101/state_management/changeNotifier/screens/maps_screen.dart';
 import 'package:flutter_101/state_management/provider/ProviderSessions/ProxyProvider/proxy_provider.dart';
 import 'package:flutter_101/state_management/provider/ProviderSessions/model/items.dart';
 import 'package:flutter_101/state_management/provider/ProviderSessions/model/user.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Meezan E-Commerce',
             theme: settings.currentTheme,
-            home: const MainScreen(),
+            home: MainScreen(),
           );
         },
       ),

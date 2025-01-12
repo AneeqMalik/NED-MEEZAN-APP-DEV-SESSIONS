@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_101/state_management/changeNotifier/screens/home_screen.dart';
 import 'package:flutter_101/state_management/changeNotifier/screens/settings_screen.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -24,6 +25,34 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _initializeFirebaseMessaging();
+  }
+
+  Future<void> _initializeFirebaseMessaging() async {
+    FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+    // Request permission for iOS
+    NotificationSettings settings = await messaging.requestPermission(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
+
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+      // Get the device token
+      String? token = await messaging.getToken();
+      if (token != null) {
+        debugPrint('Device Token: $token');
+        // Save or send the token to your server
+      }
+    } else {
+      debugPrint('User declined or has not accepted permission');
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _children[_currentIndex],
@@ -39,6 +68,3 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
-
-
-

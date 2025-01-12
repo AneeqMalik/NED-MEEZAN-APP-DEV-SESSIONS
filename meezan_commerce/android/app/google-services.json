@@ -1,10 +1,40 @@
 {
   "project_info": {
     "project_number": "218448032604",
+    "firebase_url": "https://meezan-ecommerce-default-rtdb.firebaseio.com",
     "project_id": "meezan-ecommerce",
     "storage_bucket": "meezan-ecommerce.firebasestorage.app"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218448032604:android:a8cd857c90f0f9cc6c8799",
+        "android_client_info": {
+          "package_name": "com.example.statefulclickcounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218448032604-dffaarc3irrq62bu2eh14bo6di88nsb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaRS9LPmViJ9SfZGDJJ7bwDXogHZ446jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218448032604-dffaarc3irrq62bu2eh14bo6di88nsb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:218448032604:android:009e5c73d1825bd76c8799",
